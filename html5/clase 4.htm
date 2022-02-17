@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clase 4 HTML5 tech4inclusion</title>
+</head>
+<body>
+	<h1>clase 16 feb:</h1>
+<h2>las tablas en html</h2>
+<table>
+<caption>Países representados grupo 4 Tech4inclusion:</caption>
+<thead>
+<tr>
+<th scope="col">País</th>
+<th scope="col">Cantidad de alumnos</th>
+</tr>
+</thead>
+<tbody>
+	<tr>
+		<th scope="row">Colombia</th>
+		<td>10</td>
+	</tr>
+	<tr>
+	<th scope="row">México</th>
+	<td>5</td>
+	</tr>
+<tr>
+	<th scope="row">Guatemala</th>
+	<td>2</td>
+</tr>
+<tr>
+	<th scope="row">Ecuador</th>
+	<td>1</td>
+</tr>
+</tbody>
+<tfoot>
+	<tr>
+		<th scope="row">4 países</th>
+		<td>18 alumnos</td>
+	</tr>
+</tfoot>
+</table>
+<h2>Contenido multimedia en html</h2>
+<h3>Imágenes:</h3>
+<figure>
+<img src="../media/FotoMedianaJosiasVásquez.jpg" alt="Mi fotografía profesional" />
+<figcaption>Josias Vásquez, Especialista en accesibilidad web y desarrollo web accesible.</figcaption>
+</figure>
+<h3>imagen adaptable</h3>
+<picture>
+	<source media="(min-width: 960px)" srcset="../media/FotoJosiasVásquez.jpg" />
+	<source media="(min-width: 480px) and (max-width: 960px)" srcset="../media/FotoMedianaJosiasVásquez.jpg" />
+	<source media="(max-width: 480px)"
+			src="../media/FotoPequeñaJosiasVásquez.jpg" />
+	<img src="../media/FotoMedianaJosiasVásquez.jpg" alt="Fotografía Josias Vásquez" />
+  </picture>
+  <h3>audio en html</h3>
+<figure>
+	<figcaption>Una canción que te inspira, ejecutada en saxofón:</figcaption>
+	<audio src="../media/micancion.mp3" controls loop>
+	</audio>
+</figure>
+<h3>Vídeo y subtítulos</h3>
+<video src="../media/presentaciónJosiasVásquez.mp4" controls width="640" height="352" poster="../media/FotoPequeñaJosiasVásquez.jpg">
+<track src="../media/presentaciónJosiasVásquez.vtt" srclang="es-GT" default label="Español Guatemala" />
+<track src="../media/presentaciónJosiasVásquez - copia (2).vtt" srclang="es-CO" label="Español Colombia" />
+<track src="../media/presentaciónJosiasVásquez - copia (3).vtt" srclang="es-MX" label="Español México" />
+<track src="../media/presentaciónJosiasVásquez - copia (4).vtt" srclang="es-EC" label="Español Ecuador" />
+</video>
+<h2>Incertando contenidos de otras web</h2>
+<h3>Iframes desde youtube:</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8cSo0ijtkzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3>Embed, un contenido flash de google sites</h3>
+<embed type="application/x-shockwave-flash" 
+	src="https://sites.google.com/site/htmldesdecero/archivos/Flashhtml5.swf" 
+	width="640" 
+	height="100" 
+	quality="high" 
+	title="Fall Nature Hikes">
+	<h3>Incrustando un PDF con la etiqueta object</h3>
+	<object type="application/pdf"
+    data="../media/La consola git CMD_.pdf"
+    width="250"
+    height="200">
+</object>
+</body>
+</html>
