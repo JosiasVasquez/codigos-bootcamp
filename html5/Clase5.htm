@@ -1,45 +1,88 @@
-Identificador
-<p id="miparrafo"º	>
-title
-<p title="información adicional">Pasa el mouse para mayor información</p>
-hidden
-disable
-contenteditable
-<h1 contenteditable="">Este párrafo se puede editar</h1>
-translate
-<p translate="no">este párrafo no puede ser traducido</p>
-accesskey
-<a href="index.htm" accesskey="i">inicio</a>
-class
-<p class="textoResaltado">este es un texto resaltado</p>
-style:
-<h2 style="color:red; font-size:14pt;">Este es un título con fuente a 14 puntos y de color rojo</h2>
-dir
-<p dir="ltr">Este texto se lee de izquierda a derecha</p>
-lang
-<p lang="en">This is an english text</p>
-
-<h2>formularios</h2>
-<form>
-<textarea cols="60" rows="10">escribe tu texto</textarea>
-<input type="text" name="nombre" value="Escribe tu nombre" />
-<label>elije un número<input type="number"></label>
-<label>selecciona un número entre 1 y 10<input type="range" min="1" max="10" /></label>
-<input type="date" placeholder="Selecciona en cada campo tu fecha de nacimiento" />
-password
-color
-time
-month
-week
-checkbox
-<input type="checkbox" name="discapacidad" value="Tienes discapacidad" checked />
-<label><p>¿Qué tipo de discapacidad tienes?
-<input type="radio" name="tipo" value="visual" />
-<input type="checkbox" name="tipo" value="física" />
-</label>
-<select>
-<option>primera opción</option>
-<option selected>segunda opción:</option>
-</select>
-<datalist
-<input type="checkbox" name="d
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clase 5 HTML</title>
+	<style>
+		.textoResaltado {
+			font-size:20pt ;
+			color: blueviolet;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<h1>Clase 5 HTML</h1>
+	<h2>Atributos globales para todas las etiquetas</h2>
+	<!-- Identificador -->
+	<p id="miparrafo">Este párrafo tiene un identificador, con el comando alt+M en chrome, y alt+shift+M en firefox lo vuelves a enfocar desde cualquier parte</p>
+	<!-- title -->
+	<p title="información adicional">Pasa el mouse para mayor información</p>
+	<!-- hidden -->
+	<p hidden>Este párrafo está oculto</p>
+	<!-- contenteditable -->
+	<h1 contenteditable="">Este título se puede editar, prueba a activar el modo foco y cambiarlo como prefieras</h1>
+	<!-- translate -->
+	<p translate="no">este párrafo no puede ser traducido</p>
+	<!-- accesskey -->
+	<a href="#miparrafo" accesskey="m">Vuelve al párrafo con identificador pulsando alt+M</a>
+	<!-- class -->
+	<p class="textoResaltado">Este texto está resaltado mediante una clase, le aplicamos color de letra azul violeta, tamaño a 20 puntos, negrita y lo combertimos a mayúsculas.</p>
+	<!-- style: -->
+	<h2 style="color:red; font-size:34pt;">Este es un título con fuente a 34 puntos y de color rojo</h2>
+	<!-- dir -->
+	<p dir="ltr">Este texto se lee de izquierda a derecha</p>
+	<!-- lang -->
+	<p lang="en">This is an english text</p>
+	<h2>formularios</h2>
+	<form>
+		<input type="reset" value="Borrar formulario" />
+		<label>¿Qué estás pensando?<textarea cols="60" rows="10">escribe tu texto</textarea></label>
+		<label>Tu nombre<input type="text" name="nombre" /></label>
+		<label>Tu número de teléfono<input type="tel name="telefono"></label>
+		<label>Tu página web<input type="url" name="web" /></label>
+		<label>Tu correoelectrónico<input type="email" name="correo" placeholder="Ejemplo@dominio.com"></label>
+		<label>Tu contraseña<input type="password" name="contraseña" placeholder="Tu contraseña debes cuidarla muy bien."></label>
+		<label>Escribe el resultado de 800+950<input type="number"></label>
+		<label>selecciona un número entre 1 y 10<input type="range" min="1" max="10" /></label>
+		<label>Selecciona tu fecha de nacimiento<input type="date" placeholder="Selecciona en cada campo tu fecha de nacimiento" /></label>
+		<label>Selecciona tu hora de nacimiento<input type="time" placeholder="Selecciona en cada campo la hora y minuto exacto en que naciste"/></label>
+		<label>Ahora selecciona tu fecha y hora de nacimiento al mismo tiempo<input type="datetime-local" placeholder="Selecciona tu fecha de nacimiento, y luego la hora exacta en que naciste" /></label>
+		<label>Escribe tu fecha de nacimiento en formato dd/mm/aaaa<input type="datetime" /></label>
+		<label>¿Ya hiciste la tarea?<input type="checkbox" value="Sí ya la hice" /></label>
+		<fieldset>
+			<legend>¿Qué discapacidad tienes?</legend>
+			<label>Visual<input type="radio" name="disca" value="Visual" /></label>
+			<label>Física<input type="radio" name="disca" value="Física" /></label>
+			<label>Auditiva<input type="radio" name="disca" value="Auditiva" /></label>
+			<label>Intelectual<input type="radio" name="disca" value="Intelectual" /></label>
+		</fieldset>
+		<label>Selecciona el grupo al que perteneces en el bootcamp
+			<select name="grupo">
+				<option>grupo 1</option>
+				<option>Grupo 2</option>
+				<option>Grupo 3</option>
+				<option selected>Grupo 4</option>
+				<option>Grupo 5</option>
+			</select>
+		</label>
+		<label>Selecciona tu país<input type="text" name="pais" list="paises" /></label>
+			<datalist id="paises">
+				<option value="Colombia">Colombia</option>
+				<option value="Ecuador">Ecuador</option>
+				<option value="Guatemala">Guatemala</option>
+				<option value="México">México</option>
+			</datalist>
+		<label>Selecciona tu color favorito<input type="color" name="Color" /></label>
+		<label>Sube tu primera tarea<input type="file" name="archivo" /></label>
+		<label>Tu progreso hasta el momento es de:<progress max="100" value="33"></progress></label>
+		<label>Tu nivel de comprensión:  <meter min="0" max="100" low="25" high="75" optimum="100" value="90"></label>
+		<input type="submit" value="Enviar los datos" />
+		<input type="image" src="../media/FotoPequeñaJosiasVásquez.jpg" alt="Enviar pulsando la imagen" width="100" height="100"
+	</form>
+</body>
+</html>
