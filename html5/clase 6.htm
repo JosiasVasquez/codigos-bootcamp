@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clase 6 Etiquetas interactivas y WAI ARIA:</title>
+</head>
+<body>
+	<details>
+		<summary>
+			<h2>ejemplo etiqueta details:</h2>
+		</summary>
+		<p>Este es mi parrafo 1</p>
+		<p>Este es mi segundo párrafo 2</p>
+	</details>
+	<button onclick="document.getElementById('ejemplo').show()">Ver ventana de ejemplo</button>
+	<button onclick="document.getElementById('ejemplo1').showModal()">Ver ventana modal de ejemplo</button>
+<dialog id="ejemplo">
+<h1>Este es un ejemplo:</h1>
+<p>Párrafo de ejemplo</p>
+<button onclick="document.getElementById('ejemplo').close()">Cerrar</button>
+</dialog>
+<dialog id="ejemplo1">
+	<h1>Este es un ejemplo de una ventana modal:</h1>
+	<p>Párrafo de ejemplo</p>
+	<button onclick="document.getElementById('ejemplo1').close()">Cerrar</button>
+	</dialog>	
+</body>
+</html>
