@@ -1,22 +1,17 @@
-/* Para todo el documento */
+/* Para todo el documento */;
 * {
-/* Ponemos fondo de color amarrillo poniendo el nombre del color */
-	background-color: yellow;
-	/* Ponemos color de letras en negro con código hexadecimal. */
-	color: #000000;
+	background-color: yellow; /* Ponemos fondo de color amarrillo poniendo el nombre del color */;
+	color: #000000; /* Ponemos color de letras en negro con código hexadecimal. */;
 }
-/* Para los párrafos */
-p {
-	/* Ponemos el color de letras en color azul en formato RGB */
-	color: rgb(0, 0, 255);
+/* Para la etiqueta span */;
+span {
+	color: rgb(0, 0, 255); /* Ponemos el color de letras en color azul en formato RGB */;
 }
-/* Para el elmento con el identificador MiTitulo */
+/* Para el elmento con el identificador MiTitulo */;
 #MiTitulo {
-	/* Ponemos el color de las letras en café en formato HSL */
-	color: hsl(30, 25%, 100%);
+	color: hsl(30, 25%, 100%); /* Ponemos el color de las letras en café en formato HSL */;
 }
-/* Para el elemento con la clase TextoResaltado */
+/* Para el elemento con la clase TextoResaltado */;
 .TextoResaltado {
-/* Ponemos el color de las letras en un café más obscuro disminuyendo el brillo del color del título */
-	color:hsl(30, 25%, 90%);
+	color:hsl(30, 25%, 90%); /* Ponemos el color de las letras en un café más obscuro disminuyendo el brillo del color del título */;
 }
