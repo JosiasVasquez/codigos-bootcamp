@@ -1,21 +1,22 @@
-.texto1 {
-	text-align: center;
-	text-decoration: overline underline;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	font-size: x-large;
-	font-weight: 700;
+.texto1 { /* Abrimos clase texto1 */
+	text-align: center; /* Centramos el texto */
+	text-decoration: overline underline; /* Decoramos el texto con subrayado y suprayado */
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Seleccionamos varias familias de fuente, de tipo serif, con adornos */
+	font-size: x-large; /* Ponemos tamaño de fuente muy grande */
+	font-weight: 700; /* Ponemos grosor de la fuente en 700 que equivale a negrita */
 }
-.texto2 {
-	text-align: right;
-	text-decoration: underline;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 10pt;
+.texto2 { /* Abrimos clase texto2 */
+	text-align: right; /* Alineamos el texto a la derecha */
+	text-decoration: underline; /* Subrayamos el texto */
+	font-family: Verdana, Geneva, Tahoma, sans-serif; /* Seleccionamos otras familias de fuente, De tipo san serif, sin adornos */
+	font-size: 10pt; /* Ponemos tamaño de fuente a 10 puntos */
 }
-.texto3 {
-	background-color: transparent;
-	color: brown;
-	text-transform: uppercase;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 3.2rem;
-	font-weight: 900;
+.texto3 { /* Abrimos clase texto3 */
+	background-color: transparent; /* Ponemos un fondo transparente */
+	color: brown; /* Ponemos color de letras en café */
+	text-transform: uppercase; /* Transformamos todas las letras a mayúsculas */
+	font-family: 'Courier New', Courier, monospace; /* Seleccionamos otras familias de fuentes, Esta vez de tipo mono espaciadas. */
+	font-size: 3.2rem; /* Ponemos tamaño de fuentes a tres rem, que equivale a el tamaño base multiplicado por tres */
+	font-weight: 900; /* Ponemos el peso de fuente más grueso, 900 */
 }
+/* Leer el código HTML si hay dudas de como se aplican las clases, ver el ejemplo en el navegador para observar el resultado. */

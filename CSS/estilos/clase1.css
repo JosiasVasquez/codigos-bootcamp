@@ -1,17 +1,18 @@
-/* Para todo el documento */;
+/* Usamos el selector universal */
 * {
-	background-color: yellow; /* Ponemos fondo de color amarrillo poniendo el nombre del color */;
-	color: #000000; /* Ponemos color de letras en negro con código hexadecimal. */;
+	background-color: yellow; /* Ponemos fondo amarillo con el nombre del color en inglés */
+	color: #000000; /* Ponemos letras en color negro en formato hexadecimal */
+} /* Cerramos el selector universal */
+
+span { /* Abrimos el selector span, etiqueta html. */
+	color: rgb(0, 0, 255); /* Ponemos color azul para las letras en formato RGB */
 }
-/* Para la etiqueta span */;
-span {
-	color: rgb(0, 0, 255); /* Ponemos el color de letras en color azul en formato RGB */;
+
+#MiTitulo { /* Abrimos el selector mediante ID MiTitulo */
+	color: hsl(30, 25%, 100%); /* Ponemos color café para las letras en formato HSL */
 }
-/* Para el elmento con el identificador MiTitulo */;
-#MiTitulo {
-	color: hsl(30, 25%, 100%); /* Ponemos el color de las letras en café en formato HSL */;
+
+.TextoResaltado { /* Abrimos clase TextoResaltado */
+	color:hsl(30, 25%, 90%); /* Ponemos un color de letras café más obscuro disminuyendo la luminosidad del 100% en el ID al 90% en la clase, formato HSL */
 }
-/* Para el elemento con la clase TextoResaltado */;
-.TextoResaltado {
-	color:hsl(30, 25%, 90%); /* Ponemos el color de las letras en un café más obscuro disminuyendo el brillo del color del título */;
-}
+/* Revisa también el código HTML de la clase 1, para ver como aplicamos estilos desde el head y como atributo. */

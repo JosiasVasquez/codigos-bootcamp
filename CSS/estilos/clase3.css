@@ -1,33 +1,33 @@
-.caja1 {
-	border: 5px;
-	border-color: violet;
-	border-style: dotted;
-	padding: 15px;
-	margin: 20px;
-	background-color: yellow;
+.caja1 { /* Abrimos clase denominada caja1 */
+	border: 5px; /* Ponemos un borde de 5 pixeles para todos los lados */
+	border-color: violet; /* Ponemos un color violeta para todos los lados del borde */
+	border-style: dotted; /* Ponemos un borde punteado para todos los lados del borde */
+	padding: 15px; /* Ponemos un relleno de 15 pixeles para todos los lados */
+	margin: 20px; /* Ponemos un margen de 20 pixeles para todos los lados. */
+	background-color: yellow; /* Ponemos fondo amarillo */
 }
-.caja2 {
-	border-block: 5px;
-	border-inline: 2px;
-	border-block-color: blue;
-	border-inline-color: red;
-	background-color: yellow;
-	margin-block: 10px;
-	margin-inline: 5px;
-	padding-block: 40px;
-	padding-inline: 20px;
+.caja2 { /* Abrimos clase denominada caja2 */
+	border-block: 5px; /* Ponemos bordes de 5 pixeles para arriba y abajo */
+	border-inline: 2px; /* Ponemos bordes de dos pixeles para la izquierda y derecha */
+	border-block-color: blue; /* Ponemos color azul para los bordes de arriba y abajo */
+	border-inline-color: red; /* Ponemos color rojo para los bordes izquierdo y derecho. */
+	background-color: yellow; /* Ponemos fondo amarillo */
+	margin-block: 10px; /* Ponemos márgenes arriba y abajo de 10 pixeles */
+	margin-inline: 5px; /* Ponemos márgenes izquierdo y derecho de 5 pixeles */
+	padding-block: 40px; /* Ponemos relleno de 40 pixeles arriba y abajo */
+	padding-inline: 20px; /* Ponemos un relleno de 20 pixeles a la izquierda y a la derecha */
 }
-.caja3 {
-	border-block-start: 5px;
-	border-inline-end: 5px;
-	border-block-start-style: double;
-	border-block-start-color: black;
-	border-inline-end-color: brown;
-	border-inline-end-style: dotted;
-	padding-block-start: 30px;
-	padding-inline-end: 20px;
-	margin-block-end: 50px;
-	margin-inline-start: 30vw;
-	block-size: 50vh;
-	inline-size: 40vw;
+.caja3 { /* Abrimos clase caja3 */
+	border-block-start: 5px; /* Ponemos borde de arriba de 5 pixeles */
+	border-inline-end: 5px; /* Ponemos borde derecho de 5 pixeles */
+	border-block-start-style: double; /* Ponemos estilo de borde de arriba en doble línea */
+	border-block-start-color: black; /* Ponemos color del borde de arriba en color negro */
+	border-inline-end-color: brown; /* Ponemos color del borde derecho en café */
+	border-inline-end-style: dotted; /* Ponemos estilo del borde derecho en punteado */
+	padding-block-start: 30px; /* Ponemos relleno arriba de 30 pixeles */
+	padding-inline-end: 20px; /* Ponemos relleno a la derecha de 20 pixeles */
+	margin-block-end: 50px; /* Ponemos un margen abajo de 50 pixeles */
+	margin-inline-start: 30vw; /* Ponemos margen del 30% del ancho del viewport a la izquierda */
+	block-size: 50vh; /* Ponemos una altura fija del 30% del viewport para la caja */
+	inline-size: 40vw; /* Ponemos un ancho fijo del 40% del viewport para la caja */
 }
