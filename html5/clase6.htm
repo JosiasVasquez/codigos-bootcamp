@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Clase 6 Etiquetas interactivas y WAI ARIA:</title>
 </head>
 <body>
+	<!-- Con la siguiente etiqueta envolvemos un contenido que estará contraído -->
 	<details>
+		<!-- El contenido que tenemos en la siguiente etiqueta se muestra como título del botón contraído. -->
 		<summary>
 			<h2>ejemplo etiqueta details:</h2>
 		</summary>
 		<p>Este es mi parrafo 1</p>
 		<p>Este es mi segundo párrafo 2</p>
 	</details>
+	<!-- Con el siguiente botón abrimos la ventana de diálogo con el identificador ejemplo -->
 	<button onclick="document.getElementById('ejemplo').show()">Ver ventana de ejemplo</button>
+	<!-- Con el siguiente botón abrimos una ventana modal con el identificador ejemplo1 -->
 	<button onclick="document.getElementById('ejemplo1').showModal()">Ver ventana modal de ejemplo</button>
+	<!-- Creamos una ventana de diálogo -->
 <dialog id="ejemplo">
 <h1>Este es un ejemplo:</h1>
 <p>Párrafo de ejemplo</p>
+<!-- Botón para cerrar la ventana -->
 <button onclick="document.getElementById('ejemplo').close()">Cerrar</button>
 </dialog>
+<!-- Creamos una ventana modal -->
 <dialog id="ejemplo1">
 	<h1>Este es un ejemplo de una ventana modal:</h1>
 	<p>Párrafo de ejemplo</p>

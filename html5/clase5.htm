@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Clase 5 HTML</title>
+	<!-- Agregamos un código CSS en el head para utilizar luego la clase como atributo -->
 	<style>
 		.textoResaltado {
 			font-size:20pt ;
@@ -20,49 +20,69 @@
 	<h2>Atributos globales para todas las etiquetas</h2>
 	<!-- Identificador -->
 	<p id="miparrafo">Este párrafo tiene un identificador, con el comando alt+M en chrome, y alt+shift+M en firefox lo vuelves a enfocar desde cualquier parte</p>
-	<!-- title -->
+	<!-- título, se muestra al pasar el ratón encima -->
 	<p title="información adicional">Pasa el mouse para mayor información</p>
-	<!-- hidden -->
+	<!-- oculta el contenido -->
 	<p hidden>Este párrafo está oculto</p>
-	<!-- contenteditable -->
+	<!-- Permite editar el contenido -->
 	<h1 contenteditable="">Este título se puede editar, prueba a activar el modo foco y cambiarlo como prefieras</h1>
-	<!-- translate -->
+	<!-- Impide que se tradusca el contenido -->
 	<p translate="no">este párrafo no puede ser traducido</p>
-	<!-- accesskey -->
+	<!-- Atajo de teclado para activar o enfocar el elemento -->
 	<a href="#miparrafo" accesskey="m">Vuelve al párrafo con identificador pulsando alt+M</a>
-	<!-- class -->
+	<!-- Clase CSS especificada en el head -->
 	<p class="textoResaltado">Este texto está resaltado mediante una clase, le aplicamos color de letra azul violeta, tamaño a 20 puntos, negrita y lo combertimos a mayúsculas.</p>
-	<!-- style: -->
+	<!-- Estilo CSS aplicado con el atributo style: -->
 	<h2 style="color:red; font-size:34pt;">Este es un título con fuente a 34 puntos y de color rojo</h2>
-	<!-- dir -->
+	<!-- Dirección de lectura del contenido -->
 	<p dir="ltr">Este texto se lee de izquierda a derecha</p>
-	<!-- lang -->
+	<!-- Cambia el idioma para un contenido específico -->
 	<p lang="en">This is an english text</p>
 	<h2>formularios</h2>
+	<!-- Creamos un formulario -->
 	<form>
+		<!-- Creamos un botón para borrar los datos introducidos en el formulario -->
 		<input type="reset" value="Borrar formulario" />
+		<!-- Creamos un área de texto para insertar un texto grande -->
 		<label>¿Qué estás pensando?<textarea cols="60" rows="10">escribe tu texto</textarea></label>
+		<!-- Creamos un campo de texto corto -->
 		<label>Tu nombre<input type="text" name="nombre" /></label>
+		<!-- Creamos un campo para teléfono -->
 		<label>Tu número de teléfono<input type="tel name="telefono"></label>
+		<!-- Creamos un campo para URL -->
 		<label>Tu página web<input type="url" name="web" /></label>
+		<!-- Creamos un campo para correo electrónico -->
 		<label>Tu correoelectrónico<input type="email" name="correo" placeholder="Ejemplo@dominio.com"></label>
+		<!-- Creamos un campo para ingresar contraseña -->
 		<label>Tu contraseña<input type="password" name="contraseña" placeholder="Tu contraseña debes cuidarla muy bien."></label>
+		<!-- Creamos un campo que solo permite números -->
 		<label>Escribe el resultado de 800+950<input type="number"></label>
+		<!-- Creamos un control deslisante para elegir un número entre 1 y 10 -->
 		<label>selecciona un número entre 1 y 10<input type="range" min="1" max="10" /></label>
+		<!-- Creamos un campo para seleccionar una fecha -->
 		<label>Selecciona tu fecha de nacimiento<input type="date" placeholder="Selecciona en cada campo tu fecha de nacimiento" /></label>
+		<!-- Creamos un campo para seleccionar una hora -->
 		<label>Selecciona tu hora de nacimiento<input type="time" placeholder="Selecciona en cada campo la hora y minuto exacto en que naciste"/></label>
+		<!-- Creamos un campo para seleccionar fecha y hora al mismo tiempo -->
 		<label>Ahora selecciona tu fecha y hora de nacimiento al mismo tiempo<input type="datetime-local" placeholder="Selecciona tu fecha de nacimiento, y luego la hora exacta en que naciste" /></label>
+		<!-- Creamos un cuadro de edición para escribir la fecha -->
 		<label>Escribe tu fecha de nacimiento en formato dd/mm/aaaa<input type="datetime" /></label>
+		<!-- Creamos una casilla de verificación -->
 		<label>¿Ya hiciste la tarea?<input type="checkbox" value="Sí ya la hice" /></label>
+		<!-- Agrupamos varios botones radio dentro de la etiqueta field set -->
 		<fieldset>
+			<!-- Ponemos una descripción a la elección -->
 			<legend>¿Qué discapacidad tienes?</legend>
+			<!-- Agregamos los botones radio -->
 			<label>Visual<input type="radio" name="disca" value="Visual" /></label>
 			<label>Física<input type="radio" name="disca" value="Física" /></label>
 			<label>Auditiva<input type="radio" name="disca" value="Auditiva" /></label>
 			<label>Intelectual<input type="radio" name="disca" value="Intelectual" /></label>
 		</fieldset>
+		<!-- Creamos una lista de selección -->
 		<label>Selecciona el grupo al que perteneces en el bootcamp
 			<select name="grupo">
+				<!-- Agregamos las opciones que tiene la lista -->
 				<option>grupo 1</option>
 				<option>Grupo 2</option>
 				<option>Grupo 3</option>
@@ -70,18 +90,26 @@
 				<option>Grupo 5</option>
 			</select>
 		</label>
+		<!-- Creamos un campo de texto corto, lo asociamos con la lista para mostrar sus opciones -->
 		<label>Selecciona tu país<input type="text" name="pais" list="paises" /></label>
+		<!-- Creamos lista de opciones, aparecen a medida que el usuario escribe en el campo de texto anterior -->
 			<datalist id="paises">
 				<option value="Colombia">Colombia</option>
 				<option value="Ecuador">Ecuador</option>
 				<option value="Guatemala">Guatemala</option>
 				<option value="México">México</option>
 			</datalist>
+			<!-- Creamos un selector de color -->
 		<label>Selecciona tu color favorito<input type="color" name="Color" /></label>
+		<!-- Creamos un selector de archivo -->
 		<label>Sube tu primera tarea<input type="file" name="archivo" /></label>
+		<!-- Creamos una barra de progreso -->
 		<label>Tu progreso hasta el momento es de:<progress max="100" value="33"></progress></label>
+		<!-- Creamos un medidor  -->
 		<label>Tu nivel de comprensión:  <meter min="0" max="100" low="25" high="75" optimum="100" value="90"></label>
+			<!-- Creamos un botón para enviar los datos, con etiqueta de texto -->
 		<input type="submit" value="Enviar los datos" />
+		<!-- Creamos un botón para enviar el formulario, con una imagen en el botón. -->
 		<input type="image" src="../media/FotoPequeñaJosiasVásquez.jpg" alt="Enviar pulsando la imagen" width="100" height="100"
 	</form>
 </body>

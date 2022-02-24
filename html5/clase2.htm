@@ -1,42 +1,91 @@
+<!-- A continuación encontramos la estructura de un documento HTML -->
+
+<!-- Primero definimos que es un documento de tipo HTML5 con la siguiente línea -->
 <!DOCTYPE html>
+
+<!-- Abrimos etiqueta raíz y ponemos idioma español para todo el documento -->
 <html lang="es">
+
+    <!-- Abrimos head (cabeza del documento) -->
     <head>
+
+        <!-- Ponemos el título del documento -->
         <title>Clase dos curso HTML5</title>
+
+        <!-- Ponemos la codificación de carácteres en UTF8, que contiene los símbolos especiales del español -->
         <meta charset="utf-8" />
+
+        <!-- Le decimos al navegador que adapte nuestra página al tamaño de pantalla en la que la vea el usuario -->
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <!-- Ponemos otras etiquetas de metadatos, como autor, descripción y más. -->
         <meta name="author" content="Josias Vásquez" />
         <meta name="description" content="página de ejemplo para el curso html5" />
         <meta name="bootcamp" content="Tech4Inclusion" />
+
+        <!-- Agregamos un ícono de favoritos, que verá el usuario cuando guarde nuestra página -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link type="text/css" src="hojadeestilos.css" />
+
+        <!-- Vinculamos una hoja de estilos externa en formato CSS -->
+        <link rel="stylesheet" href="hojadeestilos.css" />
+
+        <!-- Vinculamos un documento alternativo en otro idioma -->
         <link href="versioningles.html" reflang="en">
+
         <!-- el siguiente código solo es un ejemplo, lo aprenderemos después -->
+        <!-- Agregamos estilos CSS en el head del documento -->
         <style>
             body {
                 color:blueviolet;
             }
         </style>
+
+        <!-- Agregamos scripts de javascript en archivos externos -->
         <script type="text/javascript" src="codigos.js"></script>
+
+        <!-- Agregamos código javascript directamente en el head del documento -->
         <script>
             var nombre ="Josias Vásquez";
             alert(nombre);
         </script>
         <!-- fin de código de ejemplo -->
+
+    <!-- Cerramos el head del documento -->
     </head>
+
+    <!-- Abrimos la etiqueta del cuerpo del documento -->
     <body>
+
+        <!-- Creamos unos párrafos -->
         <p>Este es mi segundo párrafo.</p>
         <p>Este es mi tercer párrafo.</p>
-        <p>Está es la primera línea<br />
+
+        <!-- Creamos un párrafo con saltos de línea fijos -->
+        <p>Esta es la primera línea<br />
 Esta es mi segunda línea<br />
-Está es mi tercera línea<br />
-Está es mi cuarta línea.</p>
+Esta es mi tercera línea<br />
+Esta es mi cuarta línea.</p>
+
+        <!-- Creamos un texto preformateado, que se muestra tal como está escrito. -->
         <pre>Texto 1
 Texto 2
 Texto 3.
         </pre>
+
+        <!-- Creamos un título de nivel 1 -->
         <h1>Este mi titular</h1>
+
+        <!-- Creamos un encabezado de segundo nivel -->
         <h2>Este el título de mi primer tema</h2>
+
+        <!-- Creamos un subtítulo de nivel 3 -->
         <h3>Este es un subtítulo</h3>
+
+        <!-- Nuevamente creamos un título de segundo nivel -->
         <h2>Este es el título de mi segundo tema</h2>
+
+    <!-- Cerramos el cuerpo del documento -->
     </body>    
+
+<!-- Cerramos la etiqueta raíz de HTML -->
 </html>

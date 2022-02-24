@@ -2,24 +2,31 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Clase 4 HTML5 tech4inclusion</title>
 </head>
 <body>
 	<h1>clase 16 feb:</h1>
 	<h2>las tablas en html</h2>
+	<!-- Creamos una tabla -->
 	<table>
+		<!-- Ponemos un título a la tabla -->
 		<caption>Países representados grupo 4 Tech4inclusion:</caption>
+		<!-- Ponemos la cabecera de la tabla -->
 		<thead>
+			<!-- Creamos una fila -->
 			<tr>
+				<!-- Creamos una celda de encabezado de columna -->
 				<th scope="col">País</th>
 				<th scope="col">Cantidad de alumnos</th>
 			</tr>
 		</thead>
+		<!-- Ponemos el cuerpo de la tabla -->
 		<tbody>
 			<tr>
+				<!-- Ponemos una celda de cabecera de fila -->
 				<th scope="row">Colombia</th>
+				<!-- Ponemos una celda común -->
 				<td>10</td>
 			</tr>
 			<tr>
@@ -35,6 +42,7 @@
 				<td>1</td>
 			</tr>
 		</tbody>
+		<!-- Ponemos el pie de la tabla con un resumen del contenido de cada columna -->
 		<tfoot>
 			<tr>
 				<th scope="row">4 países</th>
@@ -44,25 +52,35 @@
 	</table>
 	<h2>Contenido multimedia en html</h2>
 	<h3>Imágenes:</h3>
+	<!-- Ponemos una imagen y le asignamos un título con la etiqueta figure. -->
 	<figure>
 		<img src="../media/FotoMedianaJosiasVásquez.jpg" alt="Mi fotografía profesional" />
 		<figcaption>Josias Vásquez, Especialista en accesibilidad web y desarrollo web accesible.</figcaption>
 	</figure>
 	<h3>imagen adaptable</h3>
+	<!-- Creamos una imagen que carga diferentes tamaños según la pantalla del dispositivo -->
 	<picture>
+		<!-- Agregamos primera opción, se carga la imagen a tamaño normal si la pantalla tiene más de 960 px de ancho -->
 		<source media="(min-width: 960px)" srcset="../media/FotoJosiasVásquez.jpg" />
+		<!-- Segunda opción, se carga si el dispositivo tiene más de 480 px y menos de 960px de ancho -->
 		<source media="(min-width: 480px) and (max-width: 960px)" srcset="../media/FotoMedianaJosiasVásquez.jpg" />
+		<!-- La tercera opción se carga para dispositivos con menos de 480px de ancho -->
 		<source media="(max-width: 480px)" src="../media/FotoPequeñaJosiasVásquez.jpg" />
+		<!-- Cargamos la imagen predeterminada y ponemos descripción alternativa-->
 		<img src="../media/FotoMedianaJosiasVásquez.jpg" alt="Fotografía Josias Vásquez" />
 	</picture>
 	<h3>audio en html</h3>
+	<!-- Nuevamente usamos la etiqueta figure, para ponerle un título al audio -->
 	<figure>
 		<figcaption>Una canción que te inspira, ejecutada en saxofón:</figcaption>
+		<!-- Ponemos el audio -->
 		<audio src="../media/micancion.mp3" controls loop>
 		</audio>
 	</figure>
 	<h3>Vídeo y subtítulos</h3>
+	<!-- Cargamos un vídeo -->
 	<video src="../media/presentaciónJosiasVásquez.mp4" controls width="640" height="352" poster="../media/FotoPequeñaJosiasVásquez.jpg">
+		<!-- Cargamos archivo de subtítulos en diferentes idiomas-->
 		<track src="../media/presentaciónJosiasVásquez.vtt" srclang="es-GT" default label="Español Guatemala" />
 		<track src="../media/presentaciónJosiasVásquez - copia (2).vtt" srclang="es-CO" label="Español Colombia" />
 		<track src="../media/presentaciónJosiasVásquez - copia (3).vtt" srclang="es-MX" label="Español México" />
@@ -70,6 +88,7 @@
 	</video>
 	<h2>Incertando contenidos de otras web</h2>
 	<h3>Iframes desde youtube:</h3>
+	<!-- Insertamos un video de youtube desde un iframe -->
 	<iframe
 		width="560"
 		height="315"
@@ -80,6 +99,7 @@
 		allowfullscreen>
 	</iframe>
 	<h3>Embed, un contenido flash de google sites</h3>
+	<!-- Insertamos un contenido flash con la etiqueta embed -->
 	<embed
 		type="application/x-shockwave-flash"
 		src="https://sites.google.com/site/htmldesdecero/archivos/Flashhtml5.swf" 
@@ -88,6 +108,7 @@
 		quality="high" 
 		title="Fall Nature Hikes">
 	<h3>Incrustando un PDF con la etiqueta object</h3>
+	<!-- Insertamos un archivo pdf con la etiqueta object -->
 	<object
 		type="application/pdf"
 		data="../media/La consola git CMD_.pdf"
