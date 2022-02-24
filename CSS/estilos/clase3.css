@@ -1,0 +1,33 @@
+.caja1 {
+	border: 5px;
+	border-color: violet;
+	border-style: dotted;
+	padding: 15px;
+	margin: 20px;
+	background-color: yellow;
+}
+.caja2 {
+	border-block: 5px;
+	border-inline: 2px;
+	border-block-color: blue;
+	border-inline-color: red;
+	background-color: yellow;
+	margin-block: 10px;
+	margin-inline: 5px;
+	padding-block: 40px;
+	padding-inline: 20px;
+}
+.caja3 {
+	border-block-start: 5px;
+	border-inline-end: 5px;
+	border-block-start-style: double;
+	border-block-start-color: black;
+	border-inline-end-color: brown;
+	border-inline-end-style: dotted;
+	padding-block-start: 30px;
+	padding-inline-end: 20px;
+	margin-block-end: 50px;
+	margin-inline-start: 30vw;
+	block-size: 50vh;
+	inline-size: 40vw;
+}
