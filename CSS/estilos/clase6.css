@@ -1,9 +1,86 @@
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) { /* Para pantallas que tengan más de 1280 pixeles */
 
+	header, footer { /* Para la cabecera y el pie de página */
+		display: flex; /* Mostramos en bloques flexibles */
+		flex-wrap: nowrap; /* Se deben ajustar al espacio disponible */
+	}
+
+	.contenedorPrincipal { /* Para las cajas dentro del contenedor principal */
+	display: inline-flex; /* Mostramos las cajas una al lado de la otra */
+	flex-wrap: nowrap;
 }
-@media screen and (min-width: 720px) and (max-width: 1280px) {
+
+.cuerpo { /* Para las cajas que estén dentro del contenedor con la clase cuerpo */
+	display: inline-flex;
+	flex-wrap: nowrap;
+}
+
+.contenidoPrincipal { /* para el elemento con la clase contenido principal */
+	flex-grow: 2; /* Debe de tener el doble de tamaño que los demás contenedores. */
+}
+}
+@media screen and (min-width: 720px) and (max-width: 1280px) { /* Para pantallas que sean más grandes de 720 pixeles y más pequeñas que 1280 pixeles.  */
+	header, footer { /* Para la cabecera y el pie de página */
+		display: flex; /* Mostramos en bloques flexibles */
+		flex-wrap: nowrap; /* Se deben ajustar al espacio disponible */
+	}
+
+	.contenedorPrincipal { /* Para las cajas dentro del contenedor principal */
+	display: inline-flex; /* Mostramos las cajas una al lado de la otra */
+	flex-wrap: wrap; /* Permitimos que se desborden si no caben. */
+}
+
+.cuerpo { /* Para las cajas que estén dentro del contenedor con la clase cuerpo */
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.contenidoPrincipal { /* para el elemento con la clase contenido principal */
+	flex-grow: 2; /* Debe de tener el doble de tamaño que los demás contenedores. */
+}
 
 	}
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) { /* Para pantallas más pequeñas que 720 pixeles */
+	header, footer { /* Para la cabecera y el pie de página */
+		display: flex; /* Mostramos en bloques flexibles */
+		flex-wrap: wrap; /* Permitimos que se desborden si no caben */
+	}
 
+	.contenedorPrincipal .contenedorHijo { /* Para las cajas dentro del contenedor principal que tengan la clase contenedorHijo*/
+	display: none; /* Ocultamos las cajas */
+}
+
+	.cuerpo { /* Para las cajas que estén dentro del contenedor con la clase cuerpo */
+		display: flex; /* Las mostramos en bloque */
+	}
+		}
+
+		header {
+			background-image: url("../../media/EstrellasNoche.jpg"); /* Ponemos de fondo de cabecera un paisaje de noche con estrellas */
+			background-repeat: no-repeat;
+		}
+		
+		nav ul { /* Seleccionamos la lista que esté dentro de la etiqueta nav */
+			list-style-type: none; /* Quitamos las viñetas a la lista del menú */
+		}
+		
+		nav ul li {
+			display: inline; /* Mostramos los elementos uno al lado del otro para hacer un menú horizontal */
+			margin: 10px; /* Ponemos márgenes de 10 pixeles entre cada elemento */
+		}
+		
+		.lateralDerecha ul {
+			list-style-type: circle; /* Cambiamos el tipo de viñeta de la lista */
+		}
+		
+		.contenedorPrincipal .formulario {
+			display: block !important; /* solo mostramos el formulario de contacto */
+		}
+		
+		label {
+			display: inline; /* Las etiquetas del formulario las mostramos en línea. */
+		}
+		
+		input, textarea {
+			display: block; /* Los campos del formulario los mostramos en bloque, debajo de las etiquetas. */
 		}
