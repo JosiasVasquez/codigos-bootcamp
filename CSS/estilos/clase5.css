@@ -1,0 +1,48 @@
+* {
+	outline-color: yellow; /* Ponemos el contorno del foco en color amarillo. */
+	outline-style: dotted; /* Ponemos el contorno del foco punteado */
+	outline-width: 3px; /* Ponemos el grosor del contorno del foco a tres pixeles */
+}
+
+body {
+	background-color: darkgray; /* Color de fondo para el cuerpo gris obscuro */
+	opacity: 60%; /* Ponemos una transparencia al 60% */
+}
+
+header {
+	background-image: url("../../media/EstrellasNoche.jpg"); /* Ponemos de fondo de cabecera un paisaje de noche con estrellas */
+	background-repeat: no-repeat;
+}
+
+nav ul { /* Seleccionamos la lista que esté dentro de la etiqueta nav */
+	list-style-type: none; /* Quitamos las viñetas a la lista del menú */
+}
+
+nav ul li {
+	display: inline; /* Mostramos los elementos uno al lado del otro para hacer un menú horizontal */
+	margin: 10px; /* Ponemos márgenes de 10 pixeles entre cada elemento */
+}
+
+.contenedorPrincipal .contenedorHijo { /* Seleccionamos el contenido con la clase contenedorHijo que está dentro de .contenedorPrincipal */
+	display: none; /* Ocultamos el contenido */
+}
+
+.lateralDerecha {
+	float: inline-end; /* Hacemos que la barra lateral flote a la derecha */
+}
+
+.lateralDerecha ul {
+	list-style-type: circle; /* Cambiamos el tipo de viñeta de la lista */
+}
+
+.contenedorPrincipal .formulario {
+	display: block !important; /* solo mostramos el formulario de contacto */
+}
+
+label {
+	display: inline; /* Las etiquetas del formulario las mostramos en línea. */
+}
+
+input, textarea {
+	display: block; /* Los campos del formulario los mostramos en bloque, debajo de las etiquetas. */
+}
