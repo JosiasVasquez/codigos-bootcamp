@@ -7,7 +7,13 @@
 </head>
 <body>
 	<h1>Eventos, DOM, y querySelector</h1>
-<button id="saludo">Saludar</button>
+	<a onclick="alert('hola, pulsaste el enlace')">Prueba pulsar enter acá</a>
+	<a href="#" onclick="alert('hola, te gusta pulsar los enlaces de prueba')">Y prueba a pulsar este enlace</a>
+	<form>
+		<label>Cuando quites el foco de este campo, te saludo<input type="password" onblur="alert('hola, mucho gusto. Por favor escribe una contraseña')" /></label>
+	</form>
+	<button id="saludo">Salúdame</button>
+	<button id="escucha">¿Me escuchas?</button>
 <script src="../js/clase5.js"></script>
 </body>
 </html>

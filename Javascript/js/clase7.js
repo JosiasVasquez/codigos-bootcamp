@@ -1,3 +1,4 @@
+const form = document.querySelector("#calculadora");
 const parrafo = document.createElement("p");
 parrafo.style = "display:none";
 document.body.appendChild(parrafo);
@@ -57,12 +58,10 @@ function imprimirResultado(resultado) {
 parrafo.textContent = "El resultado es: "+resultado;
 parrafo.style = "display:contents";
 boton.style = "display:contents";
-let form = document.querySelector("#calculadora");
 form.style = "display:none;";
 }
 
 function mostrarFormulario() {
-let form = document.querySelector("#calculadora");
 form.style = "display:contents";
 let valor = document.querySelector("#valor");
 valor.value = "";
