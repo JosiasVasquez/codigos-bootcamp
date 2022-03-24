@@ -6,7 +6,7 @@
 }
 a[role="button"] {
 	border: solid 0.5em #000;
-	border-radius: 50%;
+	border-radius: 70%;
 	padding: 1rem;
 	background-color: hsl(199, 98, 75);
 	color:#4d4d4d;
