@@ -10,7 +10,15 @@
 	<form id="formulario">
 		<label>Ingresa el primer valor<input id="valor1" type="number" /></label>
 		<label>Ingresa el segundo valor<input id="valor2" type="number" /></label>
-		<input type="button" id="sumar" value="Calcular" />
+		<label>Selecciona la operación que deseas realizar
+			<select id="operacion">
+				<option value="suma">Suma</option>
+				<option value="resta">Resta</option>
+				<option value="multiplicacion">Multiplicación</option>
+				<option value="division">División</option>
+			</select>
+		</label>
+		<input type="button" id="calcular" value="Calcular" />
 	</form>
 	<script src="../js/clase6.js"></script>
 </body>

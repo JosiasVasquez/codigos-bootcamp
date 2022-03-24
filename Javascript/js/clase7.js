@@ -1,35 +1,36 @@
-const form = document.querySelector("#calculadora");
+const form = document.querySelector("#calculadora"); // obtenemos el objeto con el identificador calculadora
 const parrafo = document.createElement("p");
 parrafo.style = "display:none";
 document.body.appendChild(parrafo);
 
 const boton = document.createElement("button");
-boton.id = "mostrar";
+boton.id = "mostrar"; // Asignamos un identificador al botón recién creado.
 boton.style = "display:none";
 boton.textContent = "Vuelve a calcular";
 document.body.appendChild(boton);
 
 const calcular = document.querySelector("#calcular");
-calcular.onclick = function() {
-const resultado = calculaValores();
+const ejecutar = function() { // Dentro de una constante guardamos una función para crear una escucha de evento.
+let resultado = calculaValores();
 imprimirResultado(resultado);
 }
-const mostrar = function() {
+const mostrar = function() { // lo mismo que la anterior.
 mostrarFormulario();
 }
+calcular.addEventListener("click", ejecutar); // cuando el botón con el identificador calcular sea pulsado ejecutar la función guardada en la constante ejecutar.
 boton.addEventListener("click", mostrar);
 
-function calculaValores() {
-	let valor = document.querySelector("#valor");
-	let operadores = valor.value.split(" ");
+function calculaValores() { // Declaramos función.
+	let valor = document.querySelector("#valor"); // En la variable valor, guardamos el objeto del input con identificador #valor.
+	let operadores = valor.value.split(" "); // Combertimos los valores ingresados en el input con el atributo value, en un array que guardamos en operadores.
 	let tipoOperacion = document.querySelector("#operacion");
 	if (tipoOperacion.value=="suma") {
-		let resultado = parseInt(operadores[0]);
-		operadores.shift();
-		for (o of operadores) {
-			resultado += parseInt(o);
+		let resultado = parseInt(operadores[0]); // guardamos el valor del primer índice del array en la variable resultado.
+		operadores.shift(); // Eliminamos el primer índice del array.
+		for (o of operadores) { // en la variable O, guardamos en cada iteración el valor de cada índice del array operadores.
+			resultado += parseInt(o); // a la variable resultado le sumamos el valor de o, antes lo combertimos en número.
 		}
-		return(resultado);
+		return(resultado); // la función devuelve el valor de resultado.
 	} else if (tipoOperacion.value=="resta") {
 		let resultado = parseInt(operadores[0]);
 		operadores.shift();
