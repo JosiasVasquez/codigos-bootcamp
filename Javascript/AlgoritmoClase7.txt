@@ -1,0 +1,68 @@
+Algoritmo Calculadora con un solo campo, clase7 javascript:
+1. Entrada de datos: // Interfaz HTML.
+	Un formulario con el identificador calculadora
+	Una explicación para ingresar los operandos separados por espacios.
+	Un campo de tipo texto con el identificador valor
+	Un campo desplegable con las 4 operaciones básicas, tiene el identificador operacion
+	Un botón con el identificador calcular
+2. Procesamiento: // código javascript.
+	Declarar constante form, asignarle como valor el objeto HTML con el identificador #calculadora
+	Declarar constante parrafo, crear elemento p como valor.
+	Ocultar el contenido del objeto parrafo
+	Añadir el objeto parrafo a el DOM.
+	Declarar constante boton, crear elemento button como valor.
+	Asignar el identificador mostrar al objeto boton
+	Ocultar el contenido del objeto boton.
+	Agregar el texto "vuelve a calcular" al objeto boton.
+	Añadir el objeto boton como hijo del body del dom
+	Declarar constante calcular, y seleccionar el objeto HTML con el identificador #calcular
+	Declarar constante ejecutar, en su interior crear una función.
+		Declarar variable local resultado y asignarle como valor la respuesta de la función calculaValores().
+		Llamar a la función calculaValores()
+		Llamar a la función imprimirResultado() pasarle como argumento la variable resultado.
+	Declarar constante mostrar, en su interior crear función.
+		Llamar a la función mostrarFormulario()
+	Agregar escuchador de eventos para cuando calcular sea pulsado, llamar la función en la constante ejecutar.
+	Agregar escuchador de eventos cuando boton sea pulsado, llamar la función en la constante mostrar.
+	Declarar función calculaValores()
+		Declarar variable local valor, asignarle el objeto HTML con el identificador #valor
+		Declarar array operadores, asignar y dividir los números insertados en valor.value.
+		Declarar variable local tipoOperacion, seleccionar y asignarle el objeto con el identificador #operacion
+		Si tipoOperacion es igual a "suma"
+			Declarar variable local resultado, asignarle como valor el índice 0 del array operadores.
+			Eliminar el índice 0 del array operadores
+			En la variable o, insertar cada elemento del array operadores.
+				Combertir a numérico el valor de o, sumarlo a resultado y asignarlo a resultado.
+			Retornar el valor de resultado
+		O, si tipoOperacion es igual "resta"
+			Declarar variable local resultado, asignarle como valor el índice 0 del array operadores.
+			Eliminar el índice 0 del array operadores
+			En la variable o, insertar cada elemento del array operadores.
+				Combertir a numérico el valor de o, restarlo a resultado y asignarlo a resultado.
+			Retornar el valor de resultado
+O, si tipoOperacion es igual a "multiplicacion"
+			Declarar variable local resultado, asignarle como valor el índice 0 del array operadores.
+			Eliminar el índice 0 del array operadores
+			En la variable o, insertar cada elemento del array operadores.
+				Combertir a numérico el valor de o, multiplicarlo por resultado y asignarlo a resultado.
+			Retornar el valor de resultado
+O, si tipoOperacion es igual "division"
+			Declarar variable local resultado, asignarle como valor el índice 0 del array operadores.
+			Eliminar el índice 0 del array operadores
+			En la variable o, insertar cada elemento del array operadores.
+				Combertir a numérico el valor de o, dividirlo entre resultado y asignarlo a resultado.
+			Retornar el valor de resultado
+	Declarar función imprimirResultado() con un parámetro llamado resultado.
+		Agregar el texto "el resultado es: " más resultado al objeto parrafo.
+		Mostrar el contenido del objeto parrafo
+		Mostrar el contenido del objeto boton.
+		Ocultar el contenido del objeto form
+	Declarar función mostrarFormulario().
+		Mostrar el contenido del objeto form
+		Declarar variable local valor, asignarle el objeto con el identificador #valor.
+		Asignar un valor vacío a valor.value.
+		Ocultar el contenido del objeto parrafo.
+		Ocultar el contenido del objeto boton.
+3. Salida de datos.
+	Un párrafo con el texto "el resultado es: " más el resultado obtenido.
+	Un botón con el texto "vuelve a calcular"

@@ -1,0 +1,62 @@
+constante formulario = documento.consultarYSeleccionar("#formulario");
+constante calcular = documento.consultarYSeleccionar("#calcular");
+constante parrafo = documento.crearElemento("p");
+parrafo.estilo = "mostrar:nada";
+documento.cuerpo.añadirHijo(parrafo);
+constante boton = documento.crearElemento("button");
+boton.estilo = "mostrar:nada";
+boton.contenidoDeTexto = "Calcular otra vez";
+documento.cuerpo.añadirHijo(boton);
+
+calcular.alpulsar = función() {
+	local resultado = calcularResultado();
+	imprimirResultado(resultado);
+}
+
+boton.alpulsar = función() {
+	reiniciar();
+}
+
+función calcularResultado() {
+	local valor1 = documento.consultarYSeleccionar("#valor1");
+	local valor2 = documento.consultarYSeleccionar("#valor2");
+	local operador1 = combertirAEntero(valor1.value);
+	local operador2 = combertirAEntero(valor2.value);
+	local operacion = documento.consultarYSeleccionar("#operacion");
+	local resultado;
+	según (operacion.value) {
+		casoEs "suma":
+			resultado = operador1+operador2;
+			responder(resultado);
+			salir;
+		casoEs "resta":
+			resultado = operador1-operador2;
+			responder(resultado);
+			salir;
+		casoEs "multiplicacion":
+			resultado = operador1*operador2;
+			responder(resultado);
+			salir;
+			casoEs "division":
+				resultado = operador1/operador2;
+				responder(resultado);
+				salir
+	}
+}
+
+función imprimirResultado(resultado) {
+	parrafo.insertarHTML = "el resultado es: <strong>"+resultado+"</strong>";
+	parrafo.estilo = "mostrar:contenidos";
+	boton.estilo = "mostrar:contenidos";
+	formulario.estilo = "mostrar:nada";
+}
+
+función reiniciar() {
+	local valor1= documento.consultarYSeleccionar("#valor1");
+	local valor2 = documento.consultarYSeleccionar("#valor2");
+	valor1.value = "";
+	valor2.value = "";
+	formulario.estilo = "mostrar:contenidos";
+	parrafo.estilo = "mostrar:nada";
+	boton.estilo = "mostrar:nada";
+}

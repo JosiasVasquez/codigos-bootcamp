@@ -1,0 +1,72 @@
+constante form = documento.consultarYSeleccionar("#calculadora");
+constante parrafo = documento.crearElemento("p");
+parrafo.estilo = "mostrar:nada";
+documento.cuerpo.añadirHijo(parrafo);
+
+constante boton = documento.crearElemento("button");
+boton.id = "mostrar";
+boton.estilo = "mostrar:nada";
+boton.contenidoDeTexto = "Vuelve a calcular";
+documento.cuerpo.añadirHijo(boton);
+
+constante calcular = documento.consultarYSeleccionar("#calcular");
+constante ejecutar = función() { 
+local resultado = calculaValores();
+imprimirResultado(resultado);
+}
+constante mostrar = función() {
+mostrarFormulario();
+}
+
+calcular.añadirEscuchadorDeEvento("pulsar", ejecutar);
+boton.añadirEscuchadorDeEvento("click", mostrar);
+
+función calculaValores() {
+	local valor = documento.consultarYSeleccionar("#valor");
+	local operadores = valor.value.combertirAarray(" ");
+	local tipoOperacion = documento.consultarYSeleccionar("#operacion");
+	si (tipoOperacion.value=="suma") {
+		local resultado = combertirAEntero(operadores[0]);
+		operadores.EliminarPrimerElemento();
+		para (o de operadores) {
+			resultado += combertirAEntero(o);
+		}
+		responder(resultado);
+	} o si (tipoOperacion.value=="resta") {
+		local resultado = combertirAEntero(operadores[0]);
+		operadores.EliminarPrimerElemento();
+		para (o de operadores) {
+			resultado -= combertirAEntero(o);
+		}
+		responder(resultado);
+} o si (tipoOperacion.value=="multiplicacion") {
+	local resultado = combertirAEntero(operadores[0]);
+		operadores.EliminarPrimerElemento();
+		para (o de operadores) {
+			resultado *= combertirAEntero(o);
+		}
+		responder(resultado);
+} si no {
+	local resultado = combertirAEntero(operadores[0]);
+		operadores.EliminarPrimerElemento();
+		para (o de operadores) {
+			resultado /= combertirAEntero(o);
+		}
+		responder(resultado);
+}
+}
+
+función imprimirResultado(resultado) {
+parrafo.contenidoDeTexto = "El resultado es: "+resultado;
+parrafo.estilo = "mostrar:contenidos";
+boton.estilo = "mostrar:contenidos";
+form.estilo = "mostrar:nada;";
+}
+
+función mostrarFormulario() {
+form.estilo = "mostrar:contenidos";
+local valor = documento.consultarYSeleccionar("#valor");
+valor.value = "";
+parrafo.estilo = "mostrar:nada";
+boton.estilo = "mostrar:nada";
+}

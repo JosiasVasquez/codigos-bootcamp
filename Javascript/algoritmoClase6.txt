@@ -1,0 +1,62 @@
+Algoritmo: Calculadora con javascript clase 6.
+1. Entrada de datos: // Interfaz HTML
+	Formulario. Identificador, formulario
+	Un campo numérico para ingresar el primer operador. Identificador valor1
+	Un campo numérico para ingresar el segundo operador. identificador, valor2
+	Un campo para seleccionar el tipo de operación. identificador, operacion
+	Un botón para ejecutar la operación. identificador, calcular
+2. Procesamiento: // Código javascript
+	Guardar en la constante formulario el objeto html con el identificador #formulario.
+	Guardar en la constante calcular el objeto HTML con el identificador #calcular.
+	En la constante parrafo crear un elemento de tipo párrafo. "p"
+		Ocultar el contenido del elemento parrafo creado.
+		Agregar el elemento parrafo como hijo del body del objeto document.
+	En la constante boton crear un nuevo elemento de tipo botón. "button"
+		Ocultar el contenido del objeto boton.
+		Agregar el texto "calcular otra vez" al objeto boton.
+		Agregar el objeto boton como hijo del body del objeto document.
+	Cuando el botón calcular sea pulsado.
+		Declarar variable local resultado, asignar la respuesta de llamar a la función calcularResultado.
+		Llamar a la función imprimirResultado, pasarle como argumento la variable resultado declarada en el paso anterior.
+	Cuando el botón del objeto boton sea pulsado.
+		Llamar a la función reiniciar()
+	Declarar función calcularResultado()
+		Declarar variable local valor1, asignarle el objeto HTML con el identificador #valor1.
+		Declarar variable local valor2, asignarle como valor el objeto html con el identificador #valor2
+		Declarar variable local operador1, asignarle y combertir a dato numérico el valor ingresado en el objeto valor1.value
+		Declarar variable operador2, asignarle y combertir a dato numérico el valor de valor2.value
+		Declarar variable operacion, asignarle el objeto html con el identificador #operacion
+		Declarar variable resultado, sin asignar valor.
+		Ejecutar según el valor de operacion.value
+			Si es "suma"
+				Asignar la suma de operador1 más operador2 a la variable resultado
+				Retornar el valor de resultado
+				Salir del bucle.
+			Si es "resta"
+				Asignar la resta de operador1 menos operador 2 a la variable resultado
+				Retornar el valor de resultado.
+				Salir del bucle
+			Si es "multiplicacion"
+				Asignar la multiplicación de operador1 por operador2 a la variable resultado
+				Retornar el valor de resultado
+				Salir del bucle
+			Si es "division"
+				Asignar la división de operador1 dividido entre operador2 a la variable resultado
+				Retornar el valor de resultado
+				Salir del bucle
+	Declarar función imprimirResultado(con el parámetro resultado)
+		En el objeto parrafo, escribir la cadena de texto "el resultado es: <strong>" más la variable resultado más la cadena de texto "</strong>"
+		Mostrar el contenido del objeto parrafo
+		Mostrar el contenido del objeto boton
+		Ocultar el contenido del objeto formulario
+	Declarar función reiniciar()
+		Declarar variable local valor1, asignarle el objeto HTML con el identificador #valor1
+		Declarar variable local valor2, asignarle el objeto HTML con el identificador #valor2.
+		Asignar un valor vacío a valor1.value
+		Asignar un valor vació a valor2.value
+		Mostrar el contenido del objeto formulario.
+		Ocultar el contenido del objeto parrafo.
+		Ocultar el contenido del objeto boton.
+3. Salida de datos: // Interfaz HTML
+	Un párrafo con el texto "el resultado es: " más el resultado en negrita.
+	Un botón con el texto "calcular otra vez"
